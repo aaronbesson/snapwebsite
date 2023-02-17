@@ -440,11 +440,11 @@ video {
   --tw-ring-inset: var(--tw-empty,/*!*/ /*!*/);
   --tw-ring-offset-width: 0px;
   --tw-ring-offset-color: #fff;
-  --tw-ring-color: #1C64F2;
+  --tw-ring-color: #638F75;
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  border-color: #1C64F2;
+  border-color: #638F75;
 }
 
 input::-moz-placeholder, textarea::-moz-placeholder {
@@ -510,7 +510,7 @@ select {
   flex-shrink: 0;
   height: 1rem;
   width: 1rem;
-  color: #1C64F2;
+  color: #638F75;
   background-color: #fff;
   border-color: #6B7280;
   border-width: 1px;
@@ -531,7 +531,7 @@ select {
   --tw-ring-inset: var(--tw-empty,/*!*/ /*!*/);
   --tw-ring-offset-width: 2px;
   --tw-ring-offset-color: #fff;
-  --tw-ring-color: #1C64F2;
+  --tw-ring-color: #638F75;
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
@@ -644,7 +644,7 @@ input[type=file]::file-selector-button:hover {
 input[type="range"]::-webkit-slider-thumb {
   height: 1.25rem;
   width: 1.25rem;
-  background: #1C64F2;
+  background: #638F75;
   border-radius: 9999px;
   border: 0;
   appearance: none;
@@ -674,7 +674,7 @@ input[type="range"]:focus::-webkit-slider-thumb {
 input[type="range"]::-moz-range-thumb {
   height: 1.25rem;
   width: 1.25rem;
-  background: #1C64F2;
+  background: #638F75;
   border-radius: 9999px;
   border: 0;
   appearance: none;
@@ -721,8 +721,8 @@ input:checked + .toggle-bg:after {
 }
 
 input:checked + .toggle-bg {
-  background: #1C64F2;
-  border-color: #1C64F2;
+  background: #638F75;
+  border-color: #638F75;
 }
 
 .tooltip-arrow,.tooltip-arrow:before {
