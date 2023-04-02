@@ -9,7 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SnapGPT</title>
     <meta name="description" content="The Smart Text Recognition App">
-    <link href="./output.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script
         id="mcjs">!function (c, h, i, m, p) { m = c.createElement(h), p = c.getElementsByTagName(h)[0], m.async = 1, m.src = i, p.parentNode.insertBefore(m, p) }(document, "script", "https://chimpstatic.com/mcjs-connected/js/users/7e068da2bb258df3213e1d0e6/89da6b42c0167fb1b22a7e01f.js");</script>
     <!-- Google tag (gtag.js) -->
@@ -22,29 +24,41 @@
         gtag('config', 'G-X76TEVRMT4');
     </script>
     <script type="text/javascript">
-        (function(f,b){if(!b.__SV){var e,g,i,h;window.mixpanel=b;b._i=[];b.init=function(e,f,c){function g(a,d){var b=d.split(".");2==b.length&&(a=a[b[0]],d=b[1]);a[d]=function(){a.push([d].concat(Array.prototype.slice.call(arguments,0)))}}var a=b;"undefined"!==typeof c?a=b[c]=[]:c="mixpanel";a.people=a.people||[];a.toString=function(a){var d="mixpanel";"mixpanel"!==c&&(d+="."+c);a||(d+=" (stub)");return d};a.people.toString=function(){return a.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
-        for(h=0;h<i.length;h++)g(a,i[h]);var j="set set_once union unset remove delete".split(" ");a.get_group=function(){function b(c){d[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));a.push([e,call2])}}for(var d={},e=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<j.length;c++)b(j[c]);return d};b._i.push([e,f,c])};b.__SV=1.2;e=f.createElement("script");e.type="text/javascript";e.async=!0;e.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?
-        MIXPANEL_CUSTOM_LIB_URL:"file:"===f.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";g=f.getElementsByTagName("script")[0];g.parentNode.insertBefore(e,g)}})(document,window.mixpanel||[]);
-        
+        (function (f, b) {
+            if (!b.__SV) {
+                var e, g, i, h; window.mixpanel = b; b._i = []; b.init = function (e, f, c) {
+                    function g(a, d) { var b = d.split("."); 2 == b.length && (a = a[b[0]], d = b[1]); a[d] = function () { a.push([d].concat(Array.prototype.slice.call(arguments, 0))) } } var a = b; "undefined" !== typeof c ? a = b[c] = [] : c = "mixpanel"; a.people = a.people || []; a.toString = function (a) { var d = "mixpanel"; "mixpanel" !== c && (d += "." + c); a || (d += " (stub)"); return d }; a.people.toString = function () { return a.toString(1) + ".people (stub)" }; i = "disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
+                    for (h = 0; h < i.length; h++)g(a, i[h]); var j = "set set_once union unset remove delete".split(" "); a.get_group = function () { function b(c) { d[c] = function () { call2_args = arguments; call2 = [c].concat(Array.prototype.slice.call(call2_args, 0)); a.push([e, call2]) } } for (var d = {}, e = ["get_group"].concat(Array.prototype.slice.call(arguments, 0)), c = 0; c < j.length; c++)b(j[c]); return d }; b._i.push([e, f, c])
+                }; b.__SV = 1.2; e = f.createElement("script"); e.type = "text/javascript"; e.async = !0; e.src = "undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL ?
+                    MIXPANEL_CUSTOM_LIB_URL : "file:" === f.location.protocol && "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//) ? "https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js" : "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js"; g = f.getElementsByTagName("script")[0]; g.parentNode.insertBefore(e, g)
+            }
+        })(document, window.mixpanel || []);
+
         // Enabling the debug mode flag is useful during implementation,
         // but it's recommended you remove it for production
-        mixpanel.init('23a1bcbd9c4277270f9a9d73bc1606b8', {debug: true}); 
+        mixpanel.init('23a1bcbd9c4277270f9a9d73bc1606b8', { debug: true });
         mixpanel.track('Sign up');
-        </script>
+    </script>
+    <script type="text/javascript" language="javascript" src="./faq.json"></script>
+
 </head>
 
-<body>
+<body class="max-w-5xl mx-auto bg-white dark:bg-[#221E2E] ">
+
     <header>
-        <nav class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
-            <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-                <a href="https://www.snapgptai.com" class="flex items-center">
-                    <img src="./logo.png" class="mr-3 h-6 sm:h-9" alt="SnapGPT Logo" />
-                    <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">SnapGPT</span>
-                </a>
+        <nav class="py-6">
+            <div class="flex flex-row justify-between items-center mx-auto max-w-screen-xl">
+
+
+                <div class="justify-between ml-6 flex gap-6 items-center">
+                    <a href="https://www.snapgptai.com" class="items-center">
+                        <img src="./logo.png" class="mx-auto rounded-2xl"
+                            style="width: 48px; height: 48px; overflow: hidden;" alt="SnapGPT Logo" /></a>
+                    <span class="text-center text-2xl font-bold whitespace-nowrap dark:text-white">SnapGPT</span>
+                </div>
+
+                <div class="flex-1"></div>
                 <div class="flex items-center lg:order-2">
-                    <a href="https://apps.apple.com/us/app/snapgpt/id1671521520" target="_blank"
-                        class="text-white font-medium rounded-lg text-sm px-5 py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none"
-                        style="background-color: #638F75;">Download App</a>
                     <button data-collapse-toggle="mobile-menu-2" type="button"
                         class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                         aria-controls="mobile-menu-2" aria-expanded="false">
@@ -62,8 +76,9 @@
                         </svg>
                     </button>
                 </div>
-                <div class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
-                    <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+                <div class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
+                    id="mobile-menu-2 ">
+                    <ul class="flex flex-col mt-6 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
                         <li>
                             <a href="index.html"
                                 class="block py-2 pr-4 pl-3rounded bg-primary-700 lg:bg-transparent text-primary-700 lg:p-0 dark:text-white"
@@ -85,128 +100,185 @@
         </nav>
     </header>
 
-    <section class="bg-white dark:bg-gray-900">
-        <div class="grid py-8 px-4 mx-auto max-w-screen-xl lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
-            <div class="place-self-center mr-auto lg:col-span-7">
-                <h1 class="mb-4 max-w-2xl text-4xl font-extrabold leading-none md:text-5xl xl:text-6xl dark:text-white">
-                    The smart text recognition app</h1>
-                <p class="mb-6 max-w-2xl font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">Are
-                    you tired of typing out long pieces of text from images or documents? Look no further! With SnapGPT,
-                    you can simply take a photo and let the app do the rest.</p>
-                <a href="https://apps.apple.com/us/app/snapgpt/id1671521520" target="_blank"
-                    class="inline-flex justify-center items-center py-3 px-5 mr-3 text-base font-medium text-center text-white rounded-lg"
-                    style="background-color: #638F75;">
-                    Downlaod on iOS
-                    <!-- <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
-                            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                            clip-rule="evenodd"></path>
-                    </svg> -->
-                </a>
-                <div
-                    class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
-                    Android coming soon
+    <section class=" mt-12">
+        <div class="gap-12 items-center mx-auto max-w-screen-xl lg:grid lg:grid-cols-2">
+            <div class="font-light p-6 text-gray-500 sm:text-lg dark:text-gray-400">
+                <h1 class="text-4xl font-bold tracking-tight mb-8"><span class="text-[#068eec]">Image to
+                        text,</span><span class="text-blue-600">text to image,</span><br />
+                    and <span class="text-blue-700">custom prompts</span><br />
+                    are a Snap!
+                </h1>
+                SnapGPT is not just about text recognition - it's also a friendly chatbot assistant! Ask for summaries,
+                advice, or even extract keynotes and shopping lists with ease.
+
+                <div class="flex flex-row gap-6">
+                    <a href="https://apps.apple.com/us/app/snapgpt/id1671521520" target="_blank"><img
+                            src="./images/appstore.svg" alt="SnapGPT"></a>
+                    <img src="./images/playstore.svg" alt="SnapGPT">
                 </div>
             </div>
-            <div class="lg:mt-0 lg:col-span-5 lg:flex justify-center">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/6kXblpmUFeo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-            </div>
-        </div>
-    </section>
+            <div class="embed-responsive embed-responsive-16by9 relative w-full overflow-hidden rounded-lg shadow-lg mb-24"
+                style="padding-top: 56.25%">
+                <iframe height="336" class="embed-responsive-item absolute top-0 right-0 bottom-0 left-0 w-full h-full shadow-2xl rounded-3xl"
+                    src="https://www.youtube.com/embed/bTMkEptmUv0" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay;" allowfullscreen></iframe>
 
+                
+            </div>
 
-    <section class="bg-gray-50 dark:bg-gray-800">
-        <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
-            <div class="mx-auto max-w-screen-md text-center py-8">
-                <h2 class="mb-4 text-4xl font-extrabold text-gray-900 dark:text-white text-center">Are you tired of
-                    typing out long
-                    pieces of text from images or documents?</h2>
-                <p class="text-gray-500 sm:text-xl dark:text-gray-400 text-center">Look no further! With SnapGPT, you
-                    can simply
-                    take a photo and let the app do the rest. SnapGPT uses the latest OCR technology to extract text
-                    from images and the OpenAI GPT-3 API to answer any questions you have about the text. It's like
-                    having a personal research assistant in your pocket!</p>
-            </div>
-            <div class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
-                <div>
-                    <div class="mb-4 w-24 h-24 items-center">
-                        <svg class="w-10 h-10 mx-auto" fill="currentColor" viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                            <g id="SVGRepo_iconCarrier">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M5 8a1 1 0 0 1-2 0V5.923c0-.76.082-1.185.319-1.627.223-.419.558-.754.977-.977C4.738 3.082 5.162 3 5.923 3H8a1 1 0 0 1 0 2H5.923c-.459 0-.57.022-.684.082a.364.364 0 0 0-.157.157c-.06.113-.082.225-.082.684V8zm3 11a1 1 0 1 1 0 2H5.923c-.76 0-1.185-.082-1.627-.319a2.363 2.363 0 0 1-.977-.977C3.082 19.262 3 18.838 3 18.077V16a1 1 0 1 1 2 0v2.077c0 .459.022.57.082.684.038.07.087.12.157.157.113.06.225.082.684.082H8zm7-15a1 1 0 0 0 1 1h2.077c.459 0 .57.022.684.082.07.038.12.087.157.157.06.113.082.225.082.684V8a1 1 0 1 0 2 0V5.923c0-.76-.082-1.185-.319-1.627a2.363 2.363 0 0 0-.977-.977C19.262 3.082 18.838 3 18.077 3H16a1 1 0 0 0-1 1zm4 12a1 1 0 1 1 2 0v2.077c0 .76-.082 1.185-.319 1.627a2.364 2.364 0 0 1-.977.977c-.442.237-.866.319-1.627.319H16a1 1 0 1 1 0-2h2.077c.459 0 .57-.022.684-.082a.363.363 0 0 0 .157-.157c.06-.113.082-.225.082-.684V16zM3 11a1 1 0 1 0 0 2h18a1 1 0 1 0 0-2H3z"
-                                    fill="#000000"></path>
-                            </g>
-                        </svg>
-                    </div>
-                    <h3 class="mb-2 text-xl font-bold dark:text-white text-center">Scan Copy</h3>
-                    <p class="text-gray-500 dark:text-gray-400 text-center">Quickly scan documents, menus, warranties,
-                        recipes,
-                        websites.</p>
-                </div>
-                <div>
-                    <div class="mb-4 w-24 h-24 items-center">
-                        <svg class="w-10 h-10 mx-auto" fill="currentColor" viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                            <g id="SVGRepo_iconCarrier">
-                                <path
-                                    d="M10.968 18.769C15.495 18.107 19 14.434 19 9.938a8.49 8.49 0 0 0-.216-1.912C20.718 9.178 22 11.188 22 13.475a6.1 6.1 0 0 1-1.113 3.506c.06.949.396 1.781 1.01 2.497a.43.43 0 0 1-.36.71c-1.367-.111-2.485-.426-3.354-.945A7.434 7.434 0 0 1 15 19.95a7.36 7.36 0 0 1-4.032-1.181z"
-                                    fill="#000000"></path>
-                                <path
-                                    d="M7.625 16.657c.6.142 1.228.218 1.875.218 4.142 0 7.5-3.106 7.5-6.938C17 6.107 13.642 3 9.5 3 5.358 3 2 6.106 2 9.938c0 1.946.866 3.705 2.262 4.965a4.406 4.406 0 0 1-1.045 2.29.46.46 0 0 0 .386.76c1.7-.138 3.041-.57 4.022-1.296z"
-                                    fill="#000000"></path>
-                            </g>
-                        </svg>
-                    </div>
-                    <h3 class="mb-2 text-xl font-bold dark:text-white text-center">A friendly GPT chat bot</h3>
-                    <p class="text-gray-500 dark:text-gray-400 text-center">Ask for summaries, get advice, extract
-                        keynotes,
-                        shopping lists and much more.</p>
-                </div>
-                <div>
-                    <div class="mb-4 w-24 h-24 items-center">
-                        <svg class="w-10 h-10 mx-auto" fill="currentColor" viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                            <g id="SVGRepo_iconCarrier">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M12 3a5 5 0 0 1 5 5v2.005c.77.015 1.246.07 1.635.268a2.5 2.5 0 0 1 1.092 1.092C20 11.9 20 12.6 20 14v3c0 1.4 0 2.1-.273 2.635a2.5 2.5 0 0 1-1.092 1.092C18.1 21 17.4 21 16 21H8c-1.4 0-2.1 0-2.635-.273a2.5 2.5 0 0 1-1.093-1.092C4 19.1 4 18.4 4 17v-3c0-1.4 0-2.1.272-2.635a2.5 2.5 0 0 1 1.093-1.092c.389-.199.865-.253 1.635-.268V8a5 5 0 0 1 5-5zm3 5v2H9V8a3 3 0 1 1 6 0z"
-                                    fill="#000000"></path>
-                            </g>
-                        </svg>
-                    </div>
-                    <h3 class="mb-2 text-xl font-bold dark:text-white text-center">Safe and Secure</h3>
-                    <p class="text-gray-500 dark:text-gray-400 text-center">Your data is never stored online. Save your
-                        data to your
-                        device or with friends with built in native sharing.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-white dark:bg-gray-900">
-        <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
-            <div class="mx-auto max-w-screen-sm text-center">
-                <h2 class="mb-4 text-4xl font-extrabold leading-tight text-gray-900 dark:text-white">Start your free
-                    trial today</h2>
-                <p class="mb-6 font-light text-gray-500 dark:text-gray-400 md:text-lg">Try SnapGPT for FREE. No credit
-                    card required. Sign up and get 10 credits to try all the features.</p>
-                <a href="https://apps.apple.com/us/app/snapgpt/id1671521520" target="_blank" class="text-white font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2focus:outline-none"
-                    style="background-color: #638F75;">Free trial</a>
-            </div>
         </div>
     </section>
 
 
 
-    <footer class="p-4 bg-gray-50 sm:p-6 dark:bg-gray-800">
+    <section class="">
+        <div class="gap-6 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-12 lg:py-16 lg:px-6">
+            <div class="col-span-5 flex pr-12">
+
+                <img class="w-3/4" src="./images/13.png" alt="office content 1">
+                <img class=" w-3/4 self-end" style="margin-left: -120px;" src="./images/14.png" alt="office content 2">
+
+            </div>
+            <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400 col-span-7">
+                <h2
+                    class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+                    Chat with your<br />
+                    <span class="font-extrabold text-transparent text-5xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Photos/Images/Docs</span><br />
+                    in a Snap</h2>
+                <p class="mb-4">Tired of typing out long texts from images or documents? Say hello to SnapGPT! With just
+                    a snap, our app extracts the text from your images. Plus, our advanced OpenAI GPT-3 technology can
+                    answer any questions you have about the text.</p>
+                <p class="mb-4">
+                    That's not all - with our text to image and speech to text capabilities, you can take your
+                    productivity to the next level. It's like having a personal assistant in your pocket!</p>
+            </div>
+
+        </div>
+    </section>
+
+    <iframe height="336" class="embed-responsive-item w-full h-[578px] rounded-3xl shadow-2xl"
+                    src="https://www.youtube.com/embed/NMy1BmbOuqA" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+
+
+                    
+
+
+    <section class="bg-white dark:bg-[#221E2E] ">
+        <div class="grid max-w-screen-xl px-4 py-24 mx-auto lg:gap-8 lg:py-16 lg:grid-cols-12">
+
+
+            <div class="ml-12 mt-4 md:mt-0 lg:col-span-5">
+                <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"><span class="text-[#068eec]">Prompts</span> that are
+                    more than just a prompt 💬</h2>
+                <p class="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">SnapGPT believes that everyone
+                    should have a knowledgeable virtual assistant. Each prompt has a carefully engineered role
+                    preprogrammed into the system prompt to ensure that your chatbot takes on a unique and effective
+                    character.</p>
+
+            </div>
+
+            <img class="resize-none col-span-7" src="./images/prompt_code.png">
+
+        </div>
+    </section>
+
+
+    <section class="bg-white dark:bg-[#221E2E]">
+        <p class="text-3xl font-bold tracking-tight text-center my-6 mb-16 sm:text-4xl text-black dark:text-white">
+            Frequently Asked Questions
+        </p>
+        <div class="grid gap-8 grid-cols-1 md:grid-cols-3 max-w-screen-xl px-6 pb-24 mx-auto">
+
+            <script>
+                const faq = [
+                    {
+                        "question": "🤖 What is SnapGPT?",
+                        "answer":
+                            "SnapGPT is an AI-powered chat platform that combines all the features you need in one chat, including text to image, image to text, and voice to text capabilities.",
+                    },
+                    {
+                        "question": "📷 How does SnapGPT's image to text feature work?",
+                        "answer":
+                            "Simply snap or upload an image with text, and SnapGPT's advanced AI technology extracts the text from the image and turns it into editable text.",
+                    },
+                    {
+                        "question": "🎤 How does SnapGPT's speech to text feature work?",
+                        "answer":
+                            "With SnapGPT's speech to text feature, tap and hold to record your voice, and our AI technology converts your speech into editable text.",
+                    },
+                    {
+                        "question": "💰 Is SnapGPT free to use?",
+                        "answer":
+                            "Yes, you can sign up for free and access all features in the app. If you need more chats or saves, you can purchase them at an affordable price.",
+                    },
+                    {
+                        "question": "🔒 Is my chat history and personal information secure?",
+                        "answer":
+                            "Yes, we take your privacy seriously. Your chat history and personal information are encrypted and stored securely. We do not share your information with third parties.",
+                    },
+                    {
+                        "question": "👀 What makes SnapGPT's prompts special?",
+                        "answer":
+                            "SnapGPT's prompts are engineered to direct your chatbot to take on a unique and effective role. Each prompt has a carefully crafted backend role to ensure engaging conversations.",
+                    },
+                    {
+                        "question": "💾 Can I save my chats on SnapGPT?",
+                        "answer":
+                            "Yes, SnapGPT allows you to save your chats so that you can refer back to them at any time.",
+                    },
+                    {
+                        "question": "📱 How do I download SnapGPT?",
+                        "answer":
+                            "SnapGPT is available on the App Store and Google Play. Simply search for SnapGPT in the App Store or Google Play and download the app.",
+                    },
+                    {
+                        "question": "📧 How do I contact SnapGPT?",
+                        "answer":
+                            "You can contact us at info@snapgptai.com.",
+                    },
+
+                ];
+                faq.forEach((question) => {
+                    document.write(`
+                        <div class="mb-8 text-lg leading-8 ">
+                          <h2 class="text-xl font-bold leading-7 text-black dark:text-white">
+                            ${question.question}
+                          </h2>
+                          <p class="mt-2 text-gray-400">${question.answer}</p>
+                        </div>
+                      `);
+                });
+            </script>
+        </div>
+    </section>
+
+    <section class="">
+        <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Get in Touch 👋</h2>
+            <p class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">Get a technical issue? Want to send feedback about a beta feature? Would you like to discuss investing? Get in touch.</p>
+            <form action="#" class="space-y-8">
+                <div>
+                    <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
+                    <input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-[#363240] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="name@email.com" required>
+                </div>
+                <div>
+                    <label for="subject" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Subject</label>
+                    <input type="text" id="subject" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-[#363240] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="I would like to suggest a feature" required>
+                </div>
+                <div class="sm:col-span-2">
+                    <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your message</label>
+                    <textarea id="message" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-[#363240] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="I would like to add..."></textarea>
+                </div>
+                <button type="submit" class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Send message</button>
+            </form>
+        </div>
+      </section>
+
+
+    <footer class="p-4 bg-gray-50 sm:p-6 dark:bg-[#363240] rounded-3xl mb-12">
         <div class="mx-auto max-w-screen-xl">
             <div class="md:flex md:justify-between">
                 <div class="mb-6 md:mb-0">
@@ -223,7 +295,7 @@
                                 <a href="mailto:info@snapgptai.com" class="hover:underline">Support</a>
                             </li>
                             <li>
-                                <a href="#" class="hover:underline">YouTube (Coming Soon)</a>
+                                <a href="https://www.youtube.com/channel/UCRKf5gpDvlk-wcfujHnvb0g" target="_blank" class="hover:underline">YouTube</a>
                             </li>
                         </ul>
                     </div>
@@ -274,20 +346,7 @@
                                 d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
                         </svg>
                     </a>
-                    <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path fill-rule="evenodd"
-                                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                                clip-rule="evenodd" />
-                        </svg>
-                    </a>
-                    <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path fill-rule="evenodd"
-                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z"
-                                clip-rule="evenodd" />
-                        </svg>
-                    </a>
+
                 </div>
             </div>
         </div>
